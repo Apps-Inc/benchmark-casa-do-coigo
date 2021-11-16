@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: 'postgres'
+    ports:
+      - 5432:5432
+    env_file:
+      - docker/postgres/postgres.env
+    volumes:
+      - ./SQL/:/SQL/
+
+  db_admin:
+    build:
+      dockerfile: docker/pgadmin4/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 8484:80
+    env_file:
+      - docker/pgadmin4/pgadmin4.env

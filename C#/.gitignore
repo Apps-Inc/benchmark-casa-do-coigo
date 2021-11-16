@@ -1,0 +1,12 @@
+.idea/
+.vs/
+.vscode/
+
+CasaDoCodigo/bin/
+CasaDoCodigo/obj/
+CasaDoCodigo/CasaDoCodigo.csproj.user
+
+Tests/bin/
+Tests/obj/
+
+scripts/postgres-log.txt
